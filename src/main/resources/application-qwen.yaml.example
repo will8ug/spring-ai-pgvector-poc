@@ -1,0 +1,13 @@
+spring:
+  ai:
+    openai:
+      api-key: ${DASHSCOPE_API_KEY}
+      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      chat:
+        options:
+          model: qwen-plus
+          maxCompletionTokens: 10000
+      embedding:
+        options:
+          model: text-embedding-v4
+          dimensions: 128

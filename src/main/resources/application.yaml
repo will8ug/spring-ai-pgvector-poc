@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: ${SPRING_PROFILE_ENV:qwen}
+  datasource:
+    url: jdbc:postgresql://localhost:5432/vectordb
+    username: myuser
+    password: mypassword
+  ai:
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+        dimensions: 128
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    io.will.springaipoc: DEBUG
+    org.springframework.ai.chat.client.advisor: DEBUG
